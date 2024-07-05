@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView" parent="Widget.MaterialComponents.TextView"></style>
+
+    <style name="TextView.Bold" parent="TextView">
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textColor">?attr/colorMainText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.TitleCaps" parent="TextView">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">?attr/colorMainText</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextView.Bold.18" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="TextView.Bold.10" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+    <style name="EditTextCustom" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">?attr/colorEtHint</item>
+        <item name="android:textColor">?attr/colorEtTextSecond</item>
+        <item name="backgroundTint">?attr/colorEtBackgroundSecond</item>
+        <item name="drawableTint">?attr/colorEtHint</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+</resources>

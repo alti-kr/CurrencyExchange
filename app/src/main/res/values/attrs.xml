@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="colorBackground" format="color" />
+    <attr name="colorButtonText" format="color" />
+    <attr name="colorButton" format="color" />
+    <attr name="colorMainText" format="color" />
+    <attr name="colorSell" format="color" />
+    <attr name="colorBuy" format="color" />
+    <attr name="colorBackgroundVariantA" format="color" />
+    <attr name="colorGradientGreyMain" format="color" />
+    <attr name="colorGradientGreySecond" format="color" />
+    <attr name="colorEtHint" format="color" />
+    <attr name="colorEtTextSecond" format="color" />
+    <attr name="colorEtBackgroundSecond" format="color" />
+    <attr name="colorTransparent" format="color" />
 </resources>

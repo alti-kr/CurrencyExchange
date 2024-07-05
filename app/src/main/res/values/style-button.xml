@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppButton">
+        <item name="android:textColor">?attr/colorButtonText</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:paddingStart">@dimen/spacingEdgeNormal</item>
+        <item name="android:paddingEnd">@dimen/spacingEdgeNormal</item>
+        <item name="android:height">@dimen/height_common_button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">?attr/colorButton</item>
+    </style>
+</resources>

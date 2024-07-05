@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.tymofieiev.serhii.currency_exchanger.ui.currency_exchanger.ExchangeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/balanceTitle"
+            style="@style/TextView.TitleCaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacingEdgeNormalLarge"
+            android:text="@string/balance_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="MY BALANCE" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBalances"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="26dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/balanceTitle"
+            tools:layout_editor_absoluteX="-90dp"
+            tools:listitem="@layout/balance_item" />
+
+        <TextView
+            android:id="@+id/exchangeTitle"
+            style="@style/TextView.TitleCaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacingEdgeNormalLarge"
+            android:text="@string/exchange_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvBalances"
+            tools:text="MY BALANCE" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sellContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacingEdgeNormalLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exchangeTitle">
+
+            <ImageView
+                android:id="@+id/ivSell"
+                android:layout_width="@dimen/iconSizeLarge"
+                android:layout_height="@dimen/iconSizeLarge"
+                android:contentDescription="@null"
+                android:src="@drawable/cloud_upload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorSell" />
+
+            <TextView
+                android:id="@+id/tvSell"
+                style="@style/TextView.Bold.18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:text="@string/exchange_sell"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSell"
+                app:layout_constraintStart_toEndOf="@+id/ivSell"
+                app:layout_constraintTop_toTopOf="@+id/ivSell" />
+
+            <EditText
+                android:id="@+id/etSellValue"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacingEdgeNormal"
+                android:background="@null"
+                android:gravity="end"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:text="@={vm.sellValue}"
+                android:textAppearance="@style/TextView.Bold.18"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSell"
+                app:layout_constraintEnd_toStartOf="@+id/tvSellCurrency"
+                app:layout_constraintStart_toEndOf="@+id/tvSell"
+                app:layout_constraintTop_toTopOf="@+id/ivSell" />
+
+            <TextView
+
+
+                android:id="@+id/tvSellCurrency"
+                style="@style/TextView.Bold.18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:gravity="end"
+                android:onClick="@{() -> vm.selectSellCurrency()}"
+                android:text="@{vm.currencySellSymbol}"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSell"
+                app:layout_constraintEnd_toStartOf="@+id/icSelectSell"
+                app:layout_constraintTop_toTopOf="@+id/ivSell"
+                tools:text="EUR" />
+
+            <ImageView
+                android:id="@+id/icSelectSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:contentDescription="@null"
+                android:onClick="@{() -> vm.selectSellCurrency()}"
+                android:src="@drawable/ic_chevron_down"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSell"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivSell"
+                app:tint="?attr/colorMainText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacingEdgeNormalLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellContainer">
+
+            <ImageView
+                android:id="@+id/ivBuy"
+                android:layout_width="@dimen/iconSizeLarge"
+                android:layout_height="@dimen/iconSizeLarge"
+                android:contentDescription="@null"
+                android:src="@drawable/cloud_download"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorBuy" />
+
+            <TextView
+                android:id="@+id/tvBuy"
+                style="@style/TextView.Bold.18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:text="@string/exchange_buy"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBuy"
+                app:layout_constraintStart_toEndOf="@+id/ivBuy"
+                app:layout_constraintTop_toTopOf="@+id/ivBuy" />
+
+            <TextView
+                android:id="@+id/etBuyValue"
+                style="@style/TextView.Bold.18"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacingEdgeNormal"
+                android:gravity="end"
+                android:text="@{vm.buyValueAsString}"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBuy"
+                app:layout_constraintEnd_toStartOf="@+id/tvBuyCurrency"
+                app:layout_constraintStart_toEndOf="@+id/tvBuy"
+                app:layout_constraintTop_toTopOf="@+id/ivBuy" />
+
+            <TextView
+                android:id="@+id/tvBuyCurrency"
+                style="@style/TextView.Bold.18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:gravity="end"
+                android:onClick="@{() -> vm.selectBuyCurrency()}"
+                android:text="@{vm.currencyBuySymbol}"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBuy"
+                app:layout_constraintEnd_toStartOf="@+id/icSelectBuy"
+                app:layout_constraintTop_toTopOf="@+id/ivBuy"
+                tools:text="USD" />
+
+            <ImageView
+                android:id="@+id/icSelectBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacingEdgeNormal"
+                android:contentDescription="@null"
+                android:onClick="@{() -> vm.selectBuyCurrency()}"
+                android:src="@drawable/ic_chevron_down"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBuy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivBuy"
+                app:tint="?attr/colorMainText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/historyTitle"
+            style="@style/TextView.TitleCaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacingEdgeNormalLarge"
+            android:text="@string/history_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buyContainer"
+            tools:text="MY BALANCE" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOperation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0"
+            android:layout_margin="@dimen/spacingEdgeNormalLarge"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/btSubmit"
+            app:layout_constraintTop_toBottomOf="@+id/historyTitle" />
+
+        <Button
+            android:id="@+id/btSubmit"
+            style="@style/AppButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacingEdgeNormalLarge"
+            android:backgroundTint="@{vm.isOperationAvailable ? @color/purple_500 : @color/appGrey}"
+            android:enabled="@{vm.isOperationAvailable}"
+            android:onClick="@{() -> vm.submit()}"
+            android:text="@string/button_submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
