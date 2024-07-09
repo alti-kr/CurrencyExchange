@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF374B</color>
+    <color name="green">#48C271</color>
+    <color name="appGrey">#505050</color>
+    <color name="appBlack_a3">#9e9ea3</color>
+    <color name="gradientGreyMain">@color/appGrey</color>
+    <color name="gradientGreySecond">@color/appBlack_a3</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

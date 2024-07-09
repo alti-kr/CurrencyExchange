@@ -13,5 +13,17 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="colorBackground">@color/white</item>
+        <item name="colorButtonText">@color/white</item>
+        <item name="colorButton">@color/purple_500</item>
+        <item name="colorMainText">@color/black</item>
+        <item name="colorSell">@color/red</item>
+        <item name="colorBuy">@color/green</item>
+        <item name="colorBackgroundVariantA">@color/white</item>
+        <item name="colorGradientGreyMain">@color/gradientGreyMain</item>
+        <item name="colorGradientGreySecond">@color/gradientGreySecond</item>
+        <item name="colorEtBackgroundSecond">@color/white</item>
+        <item name="colorEtTextSecond">@color/black</item>
+        <item name="colorEtHint">@color/appGrey</item>
+        <item name="colorTransparent">@color/transparent</item>
     </style>
 </resources>

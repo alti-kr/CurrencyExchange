@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">CurrencyExchanger</string>
+    <string name="button_done">Done</string>
+    <string name="button_submit">Submit</string>
+    <string name="balance_title">My balance</string>
+    <string name="exchange_title">Currency exchange</string>
+    <string name="history_title">History</string>
+    <string name="exchange_sell">Sell</string>
+    <string name="exchange_buy">Buy</string>
+    <string name="exchange_history_buy">Buy:</string>
+    <string name="exchange_history_sell">Sell:</string>
+    <string name="exchange_history_fee">Fee:</string>
+    <string name="exchange_history_total">Total:</string>
+    <string name="dialog_success_convert_title">Currency converted</string>
+    <string name="dialog_success_convert_message">You have converted %s to %s.</string>
+    <string name="dialog_success_convert_message_with_commission">You have converted %s to %s. Commission Fee: %s</string>
+    <string name="cur_picker_title">Currency code</string>
+    <string name="cur_picker_hint_search">Search</string>
 </resources>

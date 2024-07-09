@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/spacingEdgeNormal">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_00"
+        style="@style/TextView.Bold.10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_4"
+        android:layout_marginEnd="@dimen/size_4"
+        android:text="@string/exchange_history_sell"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_01"
+        app:layout_constraintEnd_toStartOf="@+id/tv_01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_01" />
+
+    <TextView
+        android:id="@+id/tv_01"
+        style="@style/TextView.Bold.10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_4"
+        android:gravity="end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100 EUR" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        style="@style/TextView.Bold.10"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        android:layout_marginStart="@dimen/size_4"
+        android:layout_marginEnd="@dimen/size_4"
+        android:text="@string/exchange_history_fee"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_03"
+        app:layout_constraintEnd_toStartOf="@+id/tv_03"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@id/tv_03" />
+
+    <TextView
+        android:id="@+id/tv_03"
+        style="@style/TextView.Bold.10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_4"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_01"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100 EUR" />
+
+    <TextView
+        android:id="@+id/tv_10"
+        style="@style/TextView.Bold.10"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_4"
+        android:text="@string/exchange_history_buy"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_11"
+        app:layout_constraintEnd_toStartOf="@+id/tv_11"
+        app:layout_constraintStart_toStartOf="@+id/tv_00"
+        app:layout_constraintTop_toTopOf="@+id/tv_11" />
+
+    <TextView
+        android:id="@+id/tv_11"
+        style="@style/TextView.Bold.10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_4"
+        android:layout_marginEnd="@dimen/size_4"
+        android:gravity="end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_01"
+        tools:text="100 EUR" />
+
+
+    <TextView
+        android:id="@+id/tv_12"
+        style="@style/TextView.Bold.10"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_4"
+        android:text="@string/exchange_history_total"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_13"
+        app:layout_constraintEnd_toStartOf="@+id/tv_13"
+        app:layout_constraintStart_toStartOf="@+id/tv_02"
+        app:layout_constraintTop_toTopOf="@+id/tv_13" />
+
+    <TextView
+        android:id="@+id/tv_13"
+        style="@style/TextView.Bold.10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_4"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_11"
+        tools:text="100 EUR" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

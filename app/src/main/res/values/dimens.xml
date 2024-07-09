@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="height_common_button">42dp</dimen>
+    <dimen name="common_icon_size">24dp</dimen>
+    <dimen name="corner_radius">2dp</dimen>
+    <dimen name="spacingEdgeNormal">10dp</dimen>
+    <dimen name="spacingEdgeNormalLarge">16dp</dimen>
+    <dimen name="iconSizeLarge">48dp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="size_0">0dp</dimen>
+    <dimen name="size_4">4dp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_1">1dp</dimen>
+
+</resources>

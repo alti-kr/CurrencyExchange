@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/exchangeFragment">
+    <fragment
+        android:id="@+id/exchangeFragment"
+        android:name="com.tymofieiev.serhii.currency_exchanger.ui.currency_exchanger.ExchangeFragment">
+        <action
+            android:id="@+id/toCurrencyPicker"
+            app:destination="@+id/currencyPickerBottomSheet"
+
+            />
+    </fragment>
+    <dialog
+        android:id="@+id/currencyPickerBottomSheet"
+        android:name="com.tymofieiev.serhii.currency_exchanger.ui.currency_picker.CurrencyPickerBottomSheet"
+        android:label="CurrencyPickerBottomSheet">
+        <argument
+            android:name="parameters"
+            app:argType="com.tymofieiev.serhii.currency_exchanger.ui.currency_picker.CurrencyPickerParameters" />
+    </dialog>
+</navigation>
